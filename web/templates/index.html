@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  This is the main HTML file for the Dublin Bike Share APP.
+  It sets up the basic structure of the page, including the navigation menu,
+  header, and main container for the map and sidebar.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Sharing Map</title>
+
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <!-- declare keys and backend urls -->
+    <script>
+        /**
+         * Set up global variables for API keys and backend URLs.
+         * These values are replaced with actual values by the backend.
+         */
+        window.GOOGLE_MAP_KEY = "{{ GOOGLE_MAP_KEY }}";
+        window.GOOGLE_MAP_ID = "{{ GOOGLE_MAP_ID }}";
+        window.WEATHER_URL = "{{ WEATHER_URL }}";
+        window.BIKES_URL = "{{ BIKES_URL }}";
+        window.CURRENT_BIKES_URL = "{{ CURRENT_BIKES_URL }}";
+        window.CURRENT_WEATHER_URL = "{{ CURRENT_WEATHER_URL }}";
+        window.BIKES_ONE_DAY_URL = "{{ BIKES_ONE_DAY_URL }}";
+        window.BIKES_ONE_DAY_STATION_URL = "{{ BIKES_ONE_DAY_STATION_URL }}";
+        window.PREDICTION_URL = "{{ PREDICTION_URL }}";
+    </script>
+
+    <!-- linking the js file -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="module" src="../static/js/index.js"></script>
+</head>
+
+<body>
+    <!-- Header with title and share location button -->
+    <div class="header">
+        <h3>Dublin Bike Share APP</h3>
+        <button id="share-location-button">Share Location</button>
+    </div>
+
+    <!-- Input field for destination -->
+    <input id="des-input" class="place-controls" type="text" placeholder="Enter your destination" />
+
+    <!-- Main container for map and sidebar -->
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+            <!-- Sidebar navigation -->
+            <div id="sidebar-navigation" class="navigation">
+                <ul>
+                    <li><a id="sidebar-toggle" href="#" onclick="toggleSidebarContent()">Hide</a></li>
+                    <li id="sidebar-return"><a href="#" onclick="showWeatherInfoContainer()">Return</a></li>
+                </ul>
+            </div>
+            <!-- Sidebar content -->
+            <div id="sidebar-content">
+                <!-- Station info container-->
+                <div id="station-info-container">
+                    <div id="station-info" class="station-card"></div>
+                    <div id="station-prediction"></div>
+                    <div id="station-daily-trend"></div>
+                </div>
+
+                <!-- Weather info container -->
+                <div id="weather-info-container">
+                    <!-- Current Weather -->
+                    <div id="current-weather" class="weather-card">
+                        <h2>Current Weather</h2>
+                        <div id="current-details"></div>
+                    </div>
+
+                    <!-- Daily Forecast -->
+                    <div class="weather-card">
+                        <h2>7-Day Forecast</h2>
+                        <div id="daily-forecast" class="forecast-container"></div>
+                    </div>
+
+                    <!-- Hourly Forecast -->
+                    <div class="weather-card">
+                        <h2>24-Hour Forecast</h2>
+                        <div id="hourly-forecast" class="forecast-container"></div>
+                    </div>
+                </div>
+
+                <!-- Route container -->
+                <div id="route-container">
+                    <div id="route">
+                        <div id="google-map-link"></div>
+                        <div id="travel-mode-container">
+                            <b>Mode of Travel: </b>
+                            <select id="travel-mode">
+                                <option value="DRIVING">Driving</option>
+                                <option value="WALKING">Walking</option>
+                                <option value="BICYCLING">Bicycling</option>
+                                <option value="TRANSIT" selected>Transit</option>
+                            </select>
+                        </div>
+                        <input id="start-input" class="place-controls" type="text"
+                            placeholder="Change Start Location" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

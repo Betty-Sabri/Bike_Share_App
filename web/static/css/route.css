@@ -1,0 +1,74 @@
+#route-container {
+    display: none;
+    top: 1%;
+    right: 1%;
+    padding: 1%;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#route {
+    border: 0.1em solid #ccc;
+    background: #f5f5f5;
+    padding: 5%;
+    padding-top: 1%;
+    border-radius: 1%;
+}
+
+#google-map-link {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1.5%;
+}
+
+#google-map-link a {
+    text-decoration: none;
+}
+
+#google-map-link a:hover {
+    color: #4d90fe;
+}
+
+#travel-mode-container {
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+}
+
+#des-input {
+    display: none;
+}
+
+.place-controls {
+    background-color: #fff;
+    border-radius: 0.2em;
+    border: 0.1em solid transparent;
+    box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    font-weight: 300;
+    outline: none;
+    padding: 0 0.8em 0 1em;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    margin-top: 0.8em;
+}
+
+.place-controls:focus {
+    border-color: #4d90fe;
+}
+
+#map .place-controls {
+    margin-left: 1.5em;
+    display: block;
+    height: 2.5em;
+}
+
+#route-container .place-controls {
+    margin: 0 auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    height: 2em;
+}

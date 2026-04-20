@@ -1,0 +1,201 @@
+@import url('./map.css');
+@import url('./sidebar.css');
+@import url('./weather.css');
+@import url('./stations.css');
+@import url('./route.css');
+@import url('./bike-trend.css');
+@import url('./prediction.css');
+
+/* Set a background image for the entire body */
+html {
+    height: 80%;
+}
+
+body {
+    background-image: url('../resources/beste-e-bike-app-von-powunity-1536x864.webp');
+    /* Update the path */
+    background-size: cover;
+    /* Ensure the image covers the whole page */
+    background-position: center center;
+    /* Center the image */
+    background-attachment: fixed;
+    /* Optional: Fixed background while scrolling */
+    color: white;
+    /* Optional: Set text color to white for better contrast */
+    height: 100%;
+}
+
+
+/* Styling for the general navigation bar */
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+#menu ul {
+    background-color: #333;
+}
+
+#menu li a {
+    color: white;
+}
+
+#menu li a:hover {
+    background-color: #111;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+
+.header h3 {
+    transition: transform 0.1s ease-in-out;
+}
+
+.header h3:hover {
+    transform: scale(1.05);
+}
+
+#share-location-button {
+    margin-top: -0.75%;
+    font-size: large;
+    border-radius: 0.5rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+#share-location-button:hover {
+    transform: scale(1.02);
+}
+
+#container {
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+}
+
+.rotate-icon {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* For small mobile phones: */
+html,
+body {
+    font-size: 75%;
+}
+
+#map .place-controls {
+    margin-top: 2%;
+    width: 35%;
+}
+
+#route-container .place-controls {
+    width: 70%;
+}
+
+#radio-buttons-heatmap {
+    display: none;
+}
+
+#map #sidebar {
+    font-size: small;
+}
+
+@media only screen and (min-width: 800px) {
+    /* For small tablets: */
+
+    html,
+    body {
+        font-size: 80%;
+    }
+
+    #map .place-controls {
+        margin-top: 2%;
+        width: 22%;
+    }
+
+    #route-container .place-controls {
+        width: 70%;
+    }
+
+    #radio-buttons-heatmap {
+        display: block;
+        padding: 0em 0.8em 3em 1em;
+        margin-top: 2.5em;
+        bottom: 0.5%;
+        left: 10%;
+    }
+
+    #map #sidebar {
+        font-size: medium;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    /* For large tablets: */
+
+    html,
+    body {
+        font-size: 90%;
+    }
+
+    #map .place-controls {
+        margin-top: 1.5%;
+    }
+
+    #radio-buttons-heatmap {
+        padding: 0em 0.8em 2.5em 1em;
+        left: 5%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    /* For desktop: */
+
+    html,
+    body {
+        font-size: 100%;
+    }
+
+    #map .place-controls {
+        margin-top: 0.7%;
+    }
+
+    #radio-buttons-heatmap {
+        padding: 0em 0.8em 1em 1em;
+        margin-top: 2em;
+        bottom: auto;
+        left: auto;
+    }
+}
