@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [Features](#-features)
 - [Getting Started](#-getting-started)
   - [Installation](#-installation)
