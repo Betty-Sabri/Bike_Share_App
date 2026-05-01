@@ -1,6 +1,6 @@
 # BikeShareApp
 
-**BikeShareApp** is a responsive web application designed to help you get the shared bikes information in dublin. You can get real-time updates on bike station availability and current weather conditions based on your location, see visualized availability prediction, history trends and heat map for each bike station, and plan your routes easily using this app with minimal external API calls. 
+**BikeShareApp** is a responsive web application designed to help you get the shared bikes information in Dublin. You can get real-time updates on bike station availability and current weather conditions based on your location, see visualized availability prediction, history trends and heat map for each bike station, and plan your routes easily using this app with minimal external API calls.
 
 ---
 
